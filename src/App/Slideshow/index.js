@@ -118,7 +118,7 @@ class Slideshow extends Component {
                     <div className="Slideshow-back"
                         onMouseDown={(e) => { e.stopPropagation(); this.decrementSlide(e)}}>
                     </div>
-                    <a href="/" className="Slideshow-close"
+                    <a href={`${ process.env.PUBLIC_URL }/`} className="Slideshow-close"
                         onMouseDown={e => e.stopPropagation()}>×</a>
                     {slideItems}
                 </ul>
