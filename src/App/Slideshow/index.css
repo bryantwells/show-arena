@@ -1,0 +1,51 @@
+.Slideshow {
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: e-resize;
+}
+
+.Slideshow:focus {
+    outline:none;
+}
+
+.Slideshow-back {
+    position: absolute;
+    top: 0;
+    right: 80vw;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    cursor: w-resize;
+}
+
+.Slideshow-close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: calc(90vh - 2em);
+    left: calc(90vw - 2em);
+    z-index: 5;
+    font-size: var(--md-font-size);
+    text-align: right;
+    padding-top: .75em;
+    padding-right: 1em;
+    color: transparent;
+    cursor: pointer;
+    font-weight: normal;
+    transition: color .5s;
+}
+
+.Slideshow-close:hover {
+    color: white
+}
+
+.Message {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
