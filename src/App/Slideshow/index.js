@@ -23,8 +23,6 @@ class Slideshow extends Component {
         this.incrementSlide = this.incrementSlide.bind(this)
         this.handleKeyDown = this.handleKeyDown.bind(this)
         this.toggleSetting = this.toggleSetting.bind(this)
-        this.playSlideshow = this.playSlideshow.bind(this)
-        this.pauseSlideshow = this.pauseSlideshow.bind(this)
     }
 
     componentDidMount () {
