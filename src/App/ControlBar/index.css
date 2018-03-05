@@ -122,27 +122,3 @@
 .Slideshow[data-night-mode="false"] .Control-icon--day {
     display: none;
 }
-
-.Slideshow[data-night-mode="true"] .Control-icon--play {
-    background-image: url('./assets/icon-play-white.svg');
-}
-
-.Slideshow[data-night-mode="false"] .Control-icon--play {
-    background-image: url('./assets/icon-play-black.svg');
-}
-
-.Slideshow[data-night-mode="true"] .Control-icon--pause {
-    background-image: url('./assets/icon-pause-white.svg');
-}
-
-.Slideshow[data-night-mode="false"] .Control-icon--pause {
-    background-image: url('./assets/icon-pause-black.svg');
-}
-
-.Slideshow[data-play="true"] .Control-icon--pause {
-    display: none;
-}
-
-.Slideshow[data-play="false"] .Control-icon--play {
-    display: none;
-}

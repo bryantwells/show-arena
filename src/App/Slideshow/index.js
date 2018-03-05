@@ -16,8 +16,7 @@ class Slideshow extends Component {
             error: null,
             settings: {
                 nightMode: false,
-                ui: true,
-                play: false
+                ui: true
             }
         }
 
@@ -67,23 +66,6 @@ class Slideshow extends Component {
     componentDidUpdate (prevProps, prevState) {
         // Focus the page (to register keyboard events)
         ReactDOM.findDOMNode(this).focus()
-
-        if (this.state.settings.play !== prevState.settings.play) {
-            if (this.state.settings.play) {
-                this.playSlideshow()
-            } else {
-                this.pauseSlideshow()
-            }
-        }
-
-    }
-
-    playSlideshow () {
-        this.playIntervalId = setInterval(this.incrementSlide, 1500)
-    }
-
-    pauseSlideshow () {
-        clearInterval(this.playIntervalId)
     }
 
     componentWillReceiveProps (newProps) {

@@ -8,12 +8,6 @@ class ControlBar extends Component {
         return (
             <div className="ControlBar">
 
-                <div className="Control Control--play"
-                    onMouseDown={(e) => { e.stopPropagation(); this.props.toggleSetting('play') }}>
-                    <div className="Control-icon Control-icon--play"></div>
-                    <div className="Control-icon Control-icon--pause"></div>
-                </div>
-
                 <div className="Control Control--ui"
                     onMouseDown={(e) => { e.stopPropagation(); this.props.toggleSetting('ui') }}>
                     <div className={`Control-toggle ${ this.props.settings.ui ? 'is-on' : 'is-off' }`}>
