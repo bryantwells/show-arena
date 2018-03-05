@@ -1,0 +1,37 @@
+.Slideshow-slideList {
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: e-resize;
+}
+
+.Slideshow:focus {
+    outline:none;
+}
+
+.Slideshow-back {
+    position: absolute;
+    top: 0;
+    right: 70vw;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    cursor: w-resize;
+}
+
+.Message {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Slideshow[data-night-mode="true"] {
+    background-color: black;
+}
+
+.Slideshow[data-night-mode="false"] {
+    background-color: white;
+}
