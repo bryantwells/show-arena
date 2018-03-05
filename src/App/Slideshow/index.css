@@ -1,4 +1,4 @@
-.Slideshow {
+.Slideshow-slideList {
     height: 100vh;
     position: relative;
     margin: 0;
@@ -14,33 +14,11 @@
 .Slideshow-back {
     position: absolute;
     top: 0;
-    right: 80vw;
+    right: 70vw;
     bottom: 0;
     left: 0;
-    z-index: 5;
+    z-index: 2;
     cursor: w-resize;
-}
-
-.Slideshow-close {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: calc(90vh - 2em);
-    left: calc(90vw - 2em);
-    z-index: 5;
-    font-size: var(--md-font-size);
-    text-align: right;
-    padding-top: .75em;
-    padding-right: 1em;
-    color: transparent;
-    cursor: pointer;
-    font-weight: normal;
-    transition: color .5s;
-}
-
-.Slideshow-close:hover {
-    color: white
 }
 
 .Message {
@@ -48,4 +26,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.Slideshow[data-night-mode="true"] {
+    background-color: black;
+}
+
+.Slideshow[data-night-mode="false"] {
+    background-color: white;
 }

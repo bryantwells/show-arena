@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "query-string": "^5.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://bryantwells.github.io/show-arena/",
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.1.0",
+    "node-sass-chokidar": "0.0.3"
   }
 }

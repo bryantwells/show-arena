@@ -9,5 +9,3 @@ Click & L/R arrows to navigate
 * [ ] Usability: Breifly expose hidden UI on open?  
 * [ ] Full bleed funtionality?  
 * [ ] Channel search?  
-
-
