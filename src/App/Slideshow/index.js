@@ -12,6 +12,7 @@ class Slideshow extends Component {
 
         this.state = {
             channel: {},
+            shareUrl: 'http://',
             activeSlide: 0,
             error: null,
             settings: {
@@ -23,6 +24,7 @@ class Slideshow extends Component {
         this.incrementSlide = this.incrementSlide.bind(this)
         this.handleKeyDown = this.handleKeyDown.bind(this)
         this.toggleSetting = this.toggleSetting.bind(this)
+        this.updateShareUrl = this.updateShareUrl.bind(this)
     }
 
     componentDidMount () {
@@ -64,6 +66,11 @@ class Slideshow extends Component {
     componentDidUpdate (prevProps, prevState) {
         // Focus the page (to register keyboard events)
         ReactDOM.findDOMNode(this).focus()
+
+        // update share URL
+        if (prevState.settings !== this.state.settings) {
+            this.updateShareUrl()
+        }
     }
 
     componentWillReceiveProps (newProps) {
@@ -112,7 +119,7 @@ class Slideshow extends Component {
     }
 
     updateSetting (key, value) {
-        // Set the settings state from key & value strings or arrays
+        // Update the settings state from key & value strings or(!) arrays
         const settings = {...this.state.settings}
 
         if (typeof key === 'string') {
@@ -156,7 +163,13 @@ class Slideshow extends Component {
         this.updateSetting(settingKeys, settingValues)
     }
 
-
+    updateShareUrl () {
+        const origin = window.location.origin
+        const pathname = this.props.history.location.pathname.split('/')[1]
+        const query = queryString.stringify(this.state.settings)
+        this.setState({ shareUrl: `${origin}/${pathname}/?${query}` })
+        console.log(`${origin}/${pathname}/?${query}`)
+    }
 
     render () {
 
@@ -193,6 +206,7 @@ class Slideshow extends Component {
                     </div>
                     <ControlBar settings={this.state.settings}
                         toggleSetting={this.toggleSetting}
+                        shareUrl={this.state.shareUrl}
                         history={this.props.history} />
                     <ul className="Slideshow-slideList">
                         {slideItems}
@@ -203,17 +217,17 @@ class Slideshow extends Component {
         } else if (this.state.error) {
 
             return (
-                <section className="Message">
+                <div className="Message Message--error">
                     <p>Could not complete request: {this.state.error}</p>
-                </section>
+                </div>
             )
 
         } else {
 
             return (
-                <section className="Message">
+                <div className="Message Message--loading">
                     <p>get'ing the things...</p>
-                </section>
+                </div>
             )
 
         }

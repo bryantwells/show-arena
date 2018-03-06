@@ -1,100 +1,197 @@
+/* CONTROL BAR */
+
 .ControlBar {
-  z-index: 5;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-  transition: opacity .25s; }
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    transition: opacity .25s;
+}
 
-.Slideshow[data-ui="false"] .ControlBar {
-  opacity: 0; }
+/* GROUP */
 
-.Slideshow[data-ui="false"] .ControlBar:hover {
-  opacity: 1; }
+.ControlBar-group {
+    flex: 1;
+    display: flex;
+}
+
+.ControlBar-group:last-child {
+    justify-content: flex-end;
+}
+
+/* CONTROL  */
 
 .Control {
-  cursor: pointer;
-  padding: 10px 10px;
-  display: flex;
-  align-items: center;
-  opacity: 0.5;
-  transition: opacity 0.15s; }
+    cursor: pointer;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.15s;
+}
 
 .Control:hover {
-  opacity: 1; }
+    opacity: 1;
+}
+
+.Control--share {
+    position: relative;
+}
+
+
+/* TOGGLE  */
 
 .Control-toggle {
-  border: 2px solid black;
-  display: flex;
-  padding: 3px 5px;
-  border-radius: 10px; }
-
-.Control-toggle.is-off {
-  justify-content: flex-end; }
-
-.Control-toggle {
-  width: 60px;
-  position: relative; }
-
-.Slideshow[data-night-mode="true"] .Control-toggle {
-  border-color: white; }
-
-.Control-toggleSlider {
-  width: 13px;
-  height: 13px;
-  background-color: black;
-  position: absolute;
-  right: 2px;
-  top: 2px;
-  border-radius: 50%;
-  transition: right .15s; }
-
-.Slideshow[data-night-mode="true"] .Control-toggleSlider {
-  background-color: white; }
-
-.Control-toggle.is-off .Control-toggleSlider {
-  right: calc(100% - 15px);
-  top: 2px; }
-
-.Control-toggle .Control-label {
-  font-size: 10px;
-  font-weight: bold; }
-
-.Control-label--on {
-  margin-left: 3px; }
-
-.Control-toggle.is-off .Control-label--on {
-  display: none; }
+    border: 2px solid black;
+    display: flex;
+    padding: 3px 5px;
+    border-radius: 10px;
+    width: 60px;
+    position: relative;
+}
 
 .Control-toggle.is-on .Control-label--off {
-  display: none; }
+    display: none;
+}
+
+.Control-toggle.is-off {
+    justify-content: flex-end;
+}
+
+.Control-toggle.is-off .Control-toggleSlider {
+    right: calc(100% - 15px);
+    top: 2px;
+}
+
+.Control-toggle.is-off .Control-label--on {
+    display: none;
+}
+
+
+/* TOGGLE SLIDER */
+
+.Control-toggleSlider {
+    width: 13px;
+    height: 13px;
+    background-color: black;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: right .15s;
+}
+
+
+/* CONTROL LABEL */
+
+.Control-label {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.Control-label--on {
+    margin-left: 3px;
+}
+
+.Control-label--copied {
+    opacity: 0;
+    transform: translateY(25%);
+    transition: 0.25s opacity, 0.25s transform;
+    position: absolute;
+    right: 100%;
+    pointer-events: none;
+}
+
+.Control-label--copied.is-active {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+/* CONTROL ICON */
 
 .Control-icon {
-  height: 30px;
-  width: 30px;
-  display: block;
-  background-size: contain; }
+    height: 30px;
+    width: 30px;
+    display: block;
+    background-size: contain;
+}
 
-.Slideshow[data-night-mode="false"] .ControlBar {
-  color: black; }
+.Control-icon--night {
+    background-image: url('./assets/icon-night.svg');
+}
 
-.Slideshow[data-night-mode="true"] .Control-icon--close {
-  background-image: url("./assets/icon-close-white.svg"); }
+.Control-icon--day {
+    background-image: url('./assets/icon-day.svg');
+}
 
-.Slideshow[data-night-mode="false"] .Control-icon--close {
-  background-image: url("./assets/icon-close-black.svg"); }
 
-.Slideshow[data-night-mode="true"] .Control-icon--night {
-  display: none; }
+/* NIGHT MODE  */
 
-.Slideshow[data-night-mode="false"] .Control-icon--night {
-  background-image: url("./assets/icon-night.svg"); }
+[data-night-mode="true"] .Control-toggle {
+    border-color: white;
+}
 
-.Slideshow[data-night-mode="true"] .Control-icon--day {
-  background-image: url("./assets/icon-day.svg"); }
+[data-night-mode="true"] .Control-toggle {
+    border-color: white;
+}
 
-.Slideshow[data-night-mode="false"] .Control-icon--day {
-  display: none; }
+[data-night-mode="true"] .Control-toggleSlider {
+    background-color: white;
+}
+
+[data-night-mode="true"] .Control-icon--night {
+    display: none;
+}
+
+[data-night-mode="true"] .Control-icon--close {
+    background-image: url('./assets/icon-close-white.svg');
+}
+
+[data-night-mode="true"] .Control-icon--share {
+    background-image: url('./assets/icon-share-white.svg');
+}
+
+[data-night-mode="true"] .ControlBar-label--copied {
+    color: white;
+    background-color: black;
+}
+
+
+/* DAY MODE  */
+
+[data-night-mode="false"] .ControlBar {
+    color: black;
+}
+
+[data-night-mode="false"] .Control-icon--day {
+    display: none;
+}
+
+[data-night-mode="false"] .Control-icon--close {
+    background-image: url('./assets/icon-close-black.svg');
+}
+
+[data-night-mode="false"] .Control-icon--share {
+    background-image: url('./assets/icon-share-black.svg');
+}
+
+[data-night-mode="false"] .ControlBar-label--copied {
+    color: black;
+    background-color: white;
+}
+
+
+/* HIDDEN UI */
+
+[data-ui="false"] .ControlBar {
+    opacity: 0;
+}
+
+[data-ui="false"] .ControlBar:hover {
+    opacity: 1;
+}
