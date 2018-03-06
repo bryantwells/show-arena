@@ -1,8 +1,14 @@
 {
-  "main.css": "static/css/main.35f7ae87.css",
-  "main.css.map": "static/css/main.35f7ae87.css.map",
-  "main.js": "static/js/main.bc4e8e72.js",
-  "main.js.map": "static/js/main.bc4e8e72.js.map",
+  "main.css": "static/css/main.9d1cc946.css",
+  "main.css.map": "static/css/main.9d1cc946.css.map",
+  "main.js": "static/js/main.1d87b805.js",
+  "main.js.map": "static/js/main.1d87b805.js.map",
+  "static/media/icon-close-black.svg": "static/media/icon-close-black.7be28fbf.svg",
+  "static/media/icon-close-white.svg": "static/media/icon-close-white.7876b634.svg",
+  "static/media/icon-day.svg": "static/media/icon-day.1b2e756b.svg",
   "static/media/icon-download.svg": "static/media/icon-download.a9bda523.svg",
-  "static/media/icon-link.svg": "static/media/icon-link.34a4a5b3.svg"
+  "static/media/icon-link.svg": "static/media/icon-link.34a4a5b3.svg",
+  "static/media/icon-night.svg": "static/media/icon-night.27d307db.svg",
+  "static/media/icon-share-black.svg": "static/media/icon-share-black.fd0ceb1b.svg",
+  "static/media/icon-share-white.svg": "static/media/icon-share-white.2ad994a3.svg"
 }
