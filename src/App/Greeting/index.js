@@ -23,23 +23,23 @@ class Greeting extends Component {
             this.props.history.push(`/${ slug }/0`)
         }
     }
-    
+
     render () {
 
         return (
             <section className="Greeting">
                 <p className="Greeting-statement">
-                    <a href="https://www.are.na/" target="blank">Are.na</a> channel URL:
+                    Enter an <a href="https://www.are.na/" target="blank">Are.na</a> channel URL:
                 </p>
                 <form onSubmit={this.handleSubmit}
                     className="Greeting-form">
                     <input type="text" name="slug"
                         className="Greeting-textInput"
                         onChange={this.handleChange}
-                        placeholder="https://www.are.na/zach-rose/cubist-google-earth" />
-                    <input type="submit" value="View"
+                        placeholder="e.g.: www.are.na/charles-broskoski/arena-influences" />
+                    <input type="submit" value="View Slideshow"
                         className="Greeting-submit"/>
-                </form>     
+                </form>
             </section>
         )
 

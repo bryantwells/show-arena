@@ -54,8 +54,8 @@ class Slide extends Component {
                         return (
                             <li className={className}>
                                 <img src={thumbmailSrc} alt={title} />
-                                <a href={attachmentSrc} target="blank" 
-                                    className="Slide-link Slide-link--download"
+                                <a href={attachmentSrc} target="blank"
+                                    className="Slide-icon Slide-icon--download"
                                     onMouseDown={e => e.stopPropagation()}>
                                     <img src={downloadIcon} alt="download" />
                                 </a>
@@ -65,7 +65,7 @@ class Slide extends Component {
                     }
 
                     default: {
-    
+
                         const extension = this.props.slideInfo.attachment.extension
                         const title = this.props.slideInfo.title
 
@@ -76,7 +76,7 @@ class Slide extends Component {
                                     <h2 className="Slide-mediaExtension">.{extension}</h2>
                                     <h3 className="Slide-mediaTitle">{title}</h3>
                                 </div>
-                                <a href={attachmentSrc} target="blank" 
+                                <a href={attachmentSrc} target="blank"
                                     className="Slide-icon Slide-icon--download"
                                     onMouseDown={e => e.stopPropagation()}>
                                     <img src={downloadIcon} alt="download" />
@@ -99,10 +99,10 @@ class Slide extends Component {
                 const channelClassName = (!this.props.slideInfo.open)
                     ? 'Slide-link Slide-link--channel is-closed'
                     : 'Slide-link Slide-link--channel'
-                
+
                 return (
                     <li className={className}>
-                        <a href={url} target="blank" 
+                        <a href={url} target="blank"
                             className={channelClassName}
                             onMouseDown={e => e.stopPropagation()}>
                             <div className="Slide-spacer"></div>
@@ -140,11 +140,11 @@ class Slide extends Component {
 
                 return (
                     <li className={className}>
-                        <a href={url} target="blank" 
+                        <a href={url} target="blank"
                             className="Slide-link Slide-link--web"
                             onMouseDown={e => e.stopPropagation()}>
                             <img src={src} alt={title} />
-                            <img src={linkIcon} alt="link" 
+                            <img src={linkIcon} alt="link"
                                 className="Slide-icon Slide-icon--link" />
                             <h2 className="Slide-title">{title}</h2>
                         </a>

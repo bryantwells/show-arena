@@ -37,6 +37,7 @@
     border-radius: .25em;
     font-family: monospace;
     text-align: center;
+    font-size: var(--sm-font-size);
 }
 
 .Greeting-submit {

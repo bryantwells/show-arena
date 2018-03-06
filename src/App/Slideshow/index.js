@@ -16,7 +16,7 @@ class Slideshow extends Component {
             activeSlide: 0,
             error: null,
             settings: {
-                nightMode: false,
+                nightMode: true,
                 ui: true
             }
         }
@@ -204,7 +204,9 @@ class Slideshow extends Component {
                     <div className="Slideshow-back"
                         onMouseDown={(e) => { e.stopPropagation(); this.decrementSlide(e) }}>
                     </div>
-                    <ControlBar settings={this.state.settings}
+                    <ControlBar title={this.state.channel.title}
+                        slug={this.props.match.params.slug}
+                        settings={this.state.settings}
                         toggleSetting={this.toggleSetting}
                         shareUrl={this.state.shareUrl}
                         history={this.props.history} />

@@ -44,6 +44,18 @@ class ControlBar extends Component {
 
                 </div>
 
+                <div className="ControlBar-group ControlBar-group--channelTitle">
+                    <div className="Control Control--title">
+                        <img className="ControlBar-logo ControlBar-logo--white" src="/logo-white.svg" alt="logo"/>
+                        <img className="ControlBar-logo ControlBar-logo--black" src="/logo-black.svg" alt="logo"/>
+                        <a className="ControlBar-channelTitle"
+                            href={`http://www.are.na/${this.props.slug}`}
+                            target="blank">
+                            {this.props.title}
+                        </a>
+                    </div>
+                </div>
+
                 <div className="ControlBar-group">
 
                     <div className="Control Control--share" onMouseDown={(e) => { e.stopPropagation() }}>
