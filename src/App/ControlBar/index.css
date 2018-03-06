@@ -35,18 +35,25 @@
 }
 
 .ControlBar-logo {
-    height: 1.75em;
+    height: 1em;
     width: auto;
     margin-right: .25em;
+    display: flex;
+    align-items: center;
+}
+
+    [data-night-mode="true"] .ControlBar-logo {
+        fill: white;
     }
 
-    [data-night-mode="true"] .ControlBar-logo--black {
-        display: none;
+    [data-night-mode="false"] .ControlBar-logo{
+        fill: black;
     }
 
-    [data-night-mode="false"] .ControlBar-logo--white {
-        display: none;
-    }
+.ControlBar-logo svg {
+    height: 100%;
+    width: auto;
+}
 
 
 /* GROUP */

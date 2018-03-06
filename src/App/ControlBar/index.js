@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import Logo from './icons/logo'
 import './index.css'
 
 class ControlBar extends Component {
@@ -46,8 +47,9 @@ class ControlBar extends Component {
 
                 <div className="ControlBar-group ControlBar-group--channelTitle">
                     <div className="Control Control--title">
-                        <img className="ControlBar-logo ControlBar-logo--white" src="/logo-white.svg" alt="logo"/>
-                        <img className="ControlBar-logo ControlBar-logo--black" src="/logo-black.svg" alt="logo"/>
+                        <div className="ControlBar-logo">
+                            <Logo />
+                        </div>
                         <a className="ControlBar-channelTitle"
                             href={`http://www.are.na/${this.props.slug}`}
                             target="blank">
