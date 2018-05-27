@@ -5,7 +5,7 @@
 Show Are.na is built on top of the [Are.na API](http://dev.are.na), formatting a given channel's content into a lightweight slideshow.
 
 **Why Is It**  
-As research accumulates within a channel on [Are.na](http://www.are.na) — this tool can be used to  aid the presentation/articulation of a central idea.
+As research accumulates within a channel on [Are.na](http://www.are.na) — this tool can be used to help present/articulate a central idea.
 
 **To Do**
 * [x] Navigate with keyboard (l/r)
