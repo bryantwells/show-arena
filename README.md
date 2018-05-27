@@ -1,5 +1,5 @@
 ![](screenshot.png)
-[🔗 Show Are.na](https://bryantwells.github.io/show-arena)
+🔗[Show Are.na](https://bryantwells.github.io/show-arena)
 
 **What Is It**  
 Show Are.na is built on top of the Are.na API, formatting a given channel's content into a lightweight slideshow.
@@ -14,7 +14,6 @@ As research accumulates within a channel on the Are.na platform — this tool ma
 * [x] Configure UI settings via query parameters
 * [x] Get shareable link via UI
 * [x] Support all block types
-* [ ] Shareable link support in Safari
 * [ ] Toggle block description visibility
 * [ ] Toggle block title visibility
 * [ ] Lazy loading
