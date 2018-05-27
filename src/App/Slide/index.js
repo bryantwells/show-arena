@@ -95,7 +95,7 @@ class Slide extends Component {
                 const title = this.props.slideInfo.title
                 const author = this.props.slideInfo.user.full_name
                 const size = this.props.slideInfo.length
-                const url = `https://are.na/${ this.props.slideInfo.slug }`
+                const url = `https://are.na/${ this.props.slideInfo.user.slug }/${ this.props.slideInfo.slug }`
                 const channelClassName = (!this.props.slideInfo.open)
                     ? 'Slide-link Slide-link--channel is-closed'
                     : 'Slide-link Slide-link--channel'
