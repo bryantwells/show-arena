@@ -164,11 +164,11 @@ class Slideshow extends Component {
     }
 
     updateShareUrl () {
-        const origin = window.location.origin
-        const pathname = this.props.history.location.pathname.split('/')[1]
+        const url = window.location.href
+        const slug = this.props.match.params.slug
+        const origin = url.slice(0, url.indexOf(slug) - 1)
         const query = queryString.stringify(this.state.settings)
-        this.setState({ shareUrl: `${origin}/${pathname}/?${query}` })
-        console.log(`${origin}/${pathname}/?${query}`)
+        this.setState({ shareUrl: `${origin}/${slug}/?${query}` })
     }
 
     render () {
