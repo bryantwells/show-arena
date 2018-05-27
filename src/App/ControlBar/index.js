@@ -51,7 +51,7 @@ class ControlBar extends Component {
                             <Logo />
                         </div>
                         <a className="ControlBar-channelTitle"
-                            href={`http://www.are.na/${this.props.slug}`}
+                            href={`http://www.are.na/${this.props.userSlug}/${this.props.channelSlug}`}
                             target="blank">
                             {this.props.title}
                         </a>

@@ -14,9 +14,12 @@ class App extends Component {
         return (
             <Router history={history}>
                 <div className="App">
-                    <Route exact path="/" component={Greeting} />
-                    <Route exact path="/:slug/" component={Slideshow} />
-                    <Route exact path="/:slug/:activeSlide" component={Slideshow} />
+                    <Route exact path={process.env.PUBLIC_URL + '/'} 
+                        component={Greeting} />
+                    <Route exact path={process.env.PUBLIC_URL + '/:slug'} 
+                        component={Slideshow} />
+                    <Route exact path={process.env.PUBLIC_URL + '/:slug/:activeSlide'} 
+                        component={Slideshow} />
                 </div>
             </Router>
         )

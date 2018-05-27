@@ -17,6 +17,9 @@ class Greeting extends Component {
 
     handleSubmit (e) {
         e.preventDefault()
+
+        // (if the target url is valid) get the slug
+        // navigate to the slideshow page
         const value = this.state.value
         if (value && value.lastIndexOf('/') >= 0) {
             const slug = value.substr(value.lastIndexOf('/') + 1)

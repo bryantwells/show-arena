@@ -25,6 +25,7 @@ class Slideshow extends Component {
         this.handleKeyDown = this.handleKeyDown.bind(this)
         this.toggleSetting = this.toggleSetting.bind(this)
         this.updateShareUrl = this.updateShareUrl.bind(this)
+
     }
 
     componentDidMount () {
@@ -57,6 +58,8 @@ class Slideshow extends Component {
                         ? activeSlide
                         : 0
                 })
+
+                console.log(this.state.channel)
 
             })
             .catch(error => this.setState({ error: error }))
@@ -205,7 +208,8 @@ class Slideshow extends Component {
                         onMouseDown={(e) => { e.stopPropagation(); this.decrementSlide(e) }}>
                     </div>
                     <ControlBar title={this.state.channel.title}
-                        slug={this.props.match.params.slug}
+                        channelSlug={this.props.match.params.slug}
+                        userSlug={this.state.channel.user.slug}
                         settings={this.state.settings}
                         toggleSetting={this.toggleSetting}
                         shareUrl={this.state.shareUrl}
